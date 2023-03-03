@@ -1,0 +1,49 @@
+<p>Formulaire d'inscription</p>
+<div>
+  <label>
+    Nom:
+      <input type="text" [formControl]="username">
+  </label>
+</div>
+<div>
+  <label>
+    Email:
+      <input type="text" [formControl]="email">
+  </label>
+</div>
+<div>
+  <label>
+    Mot de passe:
+      <input type="text" [formControl]="password">
+  </label>
+</div>
+<div>
+  <label>
+    Rue:
+      <input type="text" [formControl]="rue">
+  </label>
+</div>
+<div>
+  <label>
+    Code postal:
+      <input type="text" [formControl]="codepostal">
+  </label>
+</div>
+<div>
+  <label>
+    Ville:
+      <input type="text" [formControl]="ville">
+  </label>
+</div>
+<button type = "button" (click)=validate()>Validation</button>
+<p>Détail du user</p>
+<ul>
+  <li *ngFor="let u of users">
+    Nom : {{u.username}}
+    Email : {{u.email}}
+    Mot de passe : {{u.password}}
+    rue : {{u.rue}}
+    Code postal : {{u.codepostal}}
+    Ville : {{u.ville}}
+  </li>
+</ul>
